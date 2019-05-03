@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag King</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="nav navbar-nav">
+            <a class="nav-item nav-link" href="/index.html">Home </a>
+            <a class="nav-item nav-link active" href="drgkng/index.html">Drag King <span
+                    class="sr-only">(current)</span></a>
+        </div>
+    </nav>
+
+    <div class="jumbotron bg-secondary text-white">
+
+
+        <h1 class="display-4">Drag King</h1>
+        <p class="lead">
+            Make your choice </p>
+        <hr class="my-4" />
+
+        <div class="card float-right bg-dark overflow-hidden" style="width: 18rem;">
+            <img id="carimg" class="card-img-top" src="img/quattro.png" height="150x" width="300px" alt="car image">
+            <div class="card-body">
+                <p class="card-text">HP: 68</p>
+                <p class="card-text">Gears: 5</p>
+
+            </div>
+        </div>
+        <ul class="list-group w-50">
+            <li class="list-group-item bg-dark">Shell
+                <select onchange="$('#carimg').attr('src', this.options[this.selectedIndex].value);">
+                    <option value="img/quattro.png">URquattro</option>
+                    <option value="img/mercedesw124.png">Mercedes w124</option>"
+                    <option value="img/simca.png">Simca 1307 GTS</option>
+                    <option value="img/volvo245.png">Volvo 245</option>
+                    <option value="img/trabant601.png">Trabant 601</option>
+                    <option value="img/ranchero.png">Ford ranchero</option>
+                    <option value="img/F103.png">DKW F103</option>
+                    <option value="img/AE85.png">AE85</option>
+                    <option value="img/mini.png">Mini Cooper</option>
+
+
+
+                </select>
+            </li>
+            <li class="list-group-item bg-dark">Select Engine
+                <select>
+                    <option value="v8">418 lada v8</option>
+                    <option value="rotary">1.2TDI 3L Everymod</option>
+                    <option value="zundapp">Zündapp 9-092</option>
+                    <option value="b230f">b230F</option>
+                    <option value="1.8t"> vag 1.8t</option>
+                    <option value="LSX">LSX biturbo</option>
+                    <option value="rotary">3 Rotor 20B</option>
+                    <option value="D24">D24TIC</option>
+
+                </select>
+            </li>
+
+            <li class=" list-group-item bg-dark"> aspiration
+
+                <select>
+                    <option value="na">N/A</option>
+                    <option value="turbo">Turbo</option>
+                    <option value="supercharger">Supercharger</option>
+                </select>
+
+
+            <li class=" list-group-item bg-dark"> drivetrain
+
+                <select>
+                    <option value="fwd">fwd</option>
+                    <option value="rwd">rwd</option>
+                    <option value="awd">awd</option>
+                </select>
+                gearbox
+                <select>
+                    <option value="fwd">CD09</option>
+                    <option value="rwd">ZF</option>
+                    <option value="awd">sönderskrapad m90</option>
+                </select>
+            </li>
+
+            <li class=" list-group-item bg-dark"> tires
+                <select>
+                    <option value="fwd">215/35-18R</option>
+                    <option value="rwd">255/55-16R</option>
+                    <option value="awd">260/50-19R</option>
+
+                </select>
+            </li>
+
+            <button type="button" class="btn btn-danger">Start</button>
+
+        </ul>
+
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
