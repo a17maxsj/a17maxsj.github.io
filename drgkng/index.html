@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Drag King</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+    <script src="script.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
@@ -25,7 +25,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-
 </head>
 
 <body class="bg-dark">
@@ -38,23 +37,24 @@
     </nav>
 
     <div class="jumbotron bg-secondary text-white">
-
-
         <h1 class="display-4">Drag King</h1>
         <p class="lead">
-            Make your choice </p>
+            Make your choice
+        </p>
         <hr class="my-4" />
 
-        <div class="card float-right bg-dark overflow-hidden" style="width: 18rem;">
-            <img id="carimg" class="card-img-top" src="img/quattro.png" height="150x" width="300px" alt="car image">
-            <div class="card-body">
-                <p class="card-text">HP: N/A</p>
-                <p class="card-text">Gears: N/A</p>
 
+
+        <div class="card float-right bg-dark overflow-hidden" style="width: 18rem;">
+            <img id="carimg" class="card-img-top" src="img/quattro.png" height="150x" width="300px" alt="car image" />
+            <div class="card-body">
+                <p class="card-text" id="hp">HP: N/A</p>
+                <p class="card-text" id="gears">Gears: N/A</p>
             </div>
         </div>
         <ul class="list-group w-50">
-            <li class="list-group-item bg-dark">Shell
+            <li class="list-group-item bg-dark">
+                Shell
                 <select onchange="$('#carimg').attr('src', this.options[this.selectedIndex].value);">
                     <option value="img/quattro.png">URquattro</option>
                     <option value="img/mercedesw124.png">Mercedes w124</option>"
@@ -65,72 +65,61 @@
                     <option value="img/f103.png">DKW F103</option>
                     <option value="img/ae85.png">AE85</option>
                     <option value="img/mini.png">Mini Cooper</option>
-
-
-
                 </select>
             </li>
-            <li class="list-group-item bg-dark">Select Engine
-                <select>
-                    <option value="v8">418 lada v8</option>
-                    <option value="rotary">1.2TDI 3L Everymod</option>
-                    <option value="zundapp">Zündapp 9-092</option>
-                    <option value="b230f">b230F</option>
-                    <option value="1.8t"> vag 1.8t</option>
-                    <option value="LSX">LSX biturbo</option>
-                    <option value="rotary">3 Rotor 20B</option>
-                    <option value="D24">D24TIC</option>
-
+            <li class="list-group-item bg-dark">
+                Select Engine
+                <select onchange="engine(value)">
+                    <option value="" disabled selected>Engine</option>
+                    <option value="233">418 lada v8</option>
+                    <option value="61">1.2TDI 3L Everymod</option>
+                    <option value="50">Zündapp 9-092</option>
+                    <option value="136">b230F</option>
+                    <option value="180">vag 1.8</option>
+                    <option value="476">LSX</option>
+                    <option value="300">3 Rotor 20B</option>
+                    <option value="78">D24</option>
                 </select>
 
                 Aspiration
 
-                <select>
-                    <option value="na">N/A</option>
-                    <option value="turbo">Turbo</option>
-                    <option value="supercharger">Supercharger</option>
+                <select onchange="aspiration(value)">
+                    <option value="" disabled selected>Aspiration</option>
+                    <option value="1">N/A</option>
+                    <option value="1.2">Single Turbo</option>
+                    <option value="1.15"> BiTurbo</option>
+                    <option value="1.17">Supercharger</option>
                 </select>
             </li>
 
-
-
-
-            <li class=" list-group-item bg-dark"> Drivetrain
+            <li class=" list-group-item bg-dark">
+                Drivetrain
 
                 <select>
-                    <option value="fwd">fwd</option>
-                    <option value="rwd">rwd</option>
-                    <option value="awd">awd</option>
+                    <option value="fwd">FWD</option>
+                    <option value="rwd">RWD</option>
+                    <option value="awd">AWD</option>
                 </select>
                 Gearbox
-                <select>
-                    <option value="fwd">CD09</option>
-                    <option value="rwd">ZF</option>
-                    <option value="awd">sönderskrapad m90</option>
+                <select onchange="gearbox(value)">
+                    <option value="6">CD009</option>
+                    <option value="5">ZF</option>
+                    <option value="4">Scraped m90</option>
                 </select>
             </li>
 
-            <li class=" list-group-item bg-dark"> Tires
+            <li class=" list-group-item bg-dark">
+                Tires
                 <select>
-                    <option value="fwd">215/35-18R</option>
-                    <option value="rwd">255/55-16R</option>
-                    <option value="awd">260/50-19R</option>
-
+                    <option value="18r">215/35-18R</option>
+                    <option value="16r">255/55-16R</option>
+                    <option value="19r">260/50-19R</option>
                 </select>
             </li>
 
             <button type="button" class="btn btn-danger">Start</button>
-
         </ul>
-
-
-
-
     </div>
-
-
-
-
 </body>
 
 </html>
