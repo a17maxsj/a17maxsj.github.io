@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Drag King</title>
+    <title>Hangelösa race nights</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
@@ -25,19 +26,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+
 </head>
 
 <body class="bg-dark">
     <nav class="navbar navbar-expand navbar-dark bg-dark">
         <div class="nav navbar-nav">
             <a class="nav-item nav-link" href="/index.html">Home </a>
-            <a class="nav-item nav-link active" href="drgkng/index.html">Hangelösa nights racing<span
+            <a class="nav-item nav-link active" href="drgkng/index.html">Hangelösa race nights<span
                     class="sr-only">(current)</span></a>
         </div>
     </nav>
 
     <div class="jumbotron bg-secondary text-white">
-        <h1 class="display-4">Hangelösa nights racing</h1>
+        <h1 class="display-4">Hangelösa race nights</h1>
         <p class="lead">
             Make your choice
         </p>
@@ -96,12 +98,14 @@
                 Drivetrain
 
                 <select>
+                    <option value="" disabled selected>Layout</option>
                     <option value="fwd">FWD</option>
                     <option value="rwd">RWD</option>
                     <option value="awd">AWD</option>
                 </select>
                 Gearbox
                 <select onchange="gearbox(value)">
+                    <option value="" disabled selected>Gearbox</option>
                     <option value="6">CD009</option>
                     <option value="5">ZF</option>
                     <option value="4">Scraped m90</option>
@@ -117,8 +121,12 @@
                 </select>
             </li>
 
-            <button type="button" class="btn btn-danger">Start</button>
+            <button type="button" onclick="drive()" class="btn btn-danger">Start</button>
         </ul>
+    </div>
+    <div class="racetrack text-white">
+
+        <img id="car" src="img/car.png" height="80px">
     </div>
 </body>
 

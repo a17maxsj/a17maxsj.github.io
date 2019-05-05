@@ -25,3 +25,15 @@ function gearbox(value) {
     document.getElementById("gears").innerHTML = "Gears: " + gearboxvalue;
 
 }
+
+function drive() {
+
+
+
+
+
+
+
+    console.log("aspiratedhp, value");
+
+}
